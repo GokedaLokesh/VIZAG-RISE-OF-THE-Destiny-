@@ -1,0 +1,20 @@
+{
+  "locations": [
+    {"name":"RK Beach","x":0,"z":-25,"type":"coast"},
+    {"name":"Beach Road","x":80,"z":125,"type":"road"},
+    {"name":"Kailasagiri","x":-210,"z":-25,"type":"hill"},
+    {"name":"MVP Colony","x":-105,"z":235,"type":"city"},
+    {"name":"Maddilapalem","x":-70,"z":390,"type":"city"},
+    {"name":"Siripuram","x":95,"z":235,"type":"city"},
+    {"name":"Dwaraka Nagar","x":260,"z":245,"type":"city"},
+    {"name":"NAD Junction","x":350,"z":410,"type":"junction"},
+    {"name":"Gajuwaka","x":500,"z":235,"type":"industrial"},
+    {"name":"Rushikonda","x":-390,"z":-10,"type":"coast"},
+    {"name":"Simhachalam","x":95,"z":515,"type":"hill"},
+    {"name":"Port / Yarada","x":490,"z":-80,"type":"industrial"},
+    {"name":"RK Beach Promenade","x":45,"z":-90,"type":"landmark"},
+    {"name":"Coastal Market","x":170,"z":100,"type":"market"},
+    {"name":"NAD Transport Hub","x":350,"z":410,"type":"landmark"},
+    {"name":"Gajuwaka Industrial Hub","x":500,"z":235,"type":"landmark"}
+  ]
+}

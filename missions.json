@@ -1,0 +1,830 @@
+{
+  "main": [
+    {
+      "id": "m01",
+      "title": "First Light",
+      "type": "story",
+      "zone": "BEACH ROAD",
+      "objective": {
+        "type": "reach",
+        "x": 0,
+        "z": -25,
+        "radius": 14
+      },
+      "steps": [
+        "Explore RK Beach"
+      ],
+      "reward": 650,
+      "dialogue": [
+        {
+          "name": "CONTACT",
+          "text": "Welcome to the coast. Start by learning the city."
+        }
+      ]
+    },
+    {
+      "id": "m02",
+      "title": "The Long Road",
+      "type": "vehicle",
+      "zone": "BEACH ROAD",
+      "objective": {
+        "type": "vehicleReach",
+        "x": 80,
+        "z": 125,
+        "radius": 18
+      },
+      "steps": [
+        "Drive to Beach Road"
+      ],
+      "reward": 800
+    },
+    {
+      "id": "m03",
+      "title": "A Stranger at the Promenade",
+      "type": "investigation",
+      "zone": "RK BEACH PROMENADE",
+      "objective": {
+        "type": "reach",
+        "x": 45,
+        "z": -90,
+        "radius": 14
+      },
+      "steps": [
+        "Meet the contact at the promenade"
+      ],
+      "reward": 900,
+      "dialogue": [
+        {
+          "name": "CONTACT",
+          "text": "Someone is watching the roads. Find out why."
+        }
+      ]
+    },
+    {
+      "id": "m04",
+      "title": "Signal in the Hills",
+      "type": "exploration",
+      "zone": "KAILASAGIRI",
+      "objective": {
+        "type": "reach",
+        "x": -210,
+        "z": -25,
+        "radius": 14
+      },
+      "steps": [
+        "Reach Kailasagiri before night"
+      ],
+      "reward": 1100
+    },
+    {
+      "id": "m05",
+      "title": "City Pulse",
+      "type": "exploration",
+      "zone": "MVP COLONY",
+      "objective": {
+        "type": "reach",
+        "x": -105,
+        "z": 235,
+        "radius": 14
+      },
+      "steps": [
+        "Visit MVP Colony"
+      ],
+      "reward": 1000
+    },
+    {
+      "id": "m06",
+      "title": "Broken Link",
+      "type": "investigation",
+      "zone": "MADDILAPALEM",
+      "objective": {
+        "type": "reach",
+        "x": -70,
+        "z": 390,
+        "radius": 14
+      },
+      "steps": [
+        "Investigate Maddilapalem"
+      ],
+      "reward": 1250
+    },
+    {
+      "id": "m07",
+      "title": "Siripuram Run",
+      "type": "vehicle",
+      "zone": "SIRIPURAM",
+      "objective": {
+        "type": "vehicleReach",
+        "x": 95,
+        "z": 235,
+        "radius": 18
+      },
+      "steps": [
+        "Deliver the vehicle to Siripuram"
+      ],
+      "reward": 1400
+    },
+    {
+      "id": "m08",
+      "title": "Downtown Pressure",
+      "type": "vehicle",
+      "zone": "DWARAKA NAGAR",
+      "objective": {
+        "type": "vehicleReach",
+        "x": 260,
+        "z": 245,
+        "radius": 18
+      },
+      "steps": [
+        "Reach Dwaraka Nagar"
+      ],
+      "reward": 1500
+    },
+    {
+      "id": "m09",
+      "title": "Wanted Man",
+      "type": "police",
+      "zone": "DWARAKA NAGAR",
+      "objective": {
+        "type": "crime",
+        "count": 1
+      },
+      "steps": [
+        "Create a police incident"
+      ],
+      "reward": 1700
+    },
+    {
+      "id": "m10",
+      "title": "Lose the Tail",
+      "type": "chase",
+      "zone": "NAD JUNCTION",
+      "objective": {
+        "type": "clearWanted",
+        "max": 0
+      },
+      "steps": [
+        "Escape the police"
+      ],
+      "reward": 1900,
+      "dialogue": [
+        {
+          "name": "CONTACT",
+          "text": "You lost them. Now move before they circle back."
+        }
+      ]
+    },
+    {
+      "id": "m11",
+      "title": "Transport Hub",
+      "type": "delivery",
+      "zone": "NAD JUNCTION",
+      "objective": {
+        "type": "reach",
+        "x": 350,
+        "z": 410,
+        "radius": 14
+      },
+      "steps": [
+        "Reach NAD Transport Hub"
+      ],
+      "reward": 1600
+    },
+    {
+      "id": "m12",
+      "title": "Industrial Trail",
+      "type": "investigation",
+      "zone": "GAJUWAKA",
+      "objective": {
+        "type": "vehicleReach",
+        "x": 500,
+        "z": 235,
+        "radius": 18
+      },
+      "steps": [
+        "Drive into Gajuwaka"
+      ],
+      "reward": 1800
+    },
+    {
+      "id": "m13",
+      "title": "Night Shift",
+      "type": "stealth",
+      "zone": "GAJUWAKA",
+      "objective": {
+        "type": "all",
+        "conditions": [
+          {
+            "type": "reach",
+            "x": 500,
+            "z": 235,
+            "radius": 20
+          },
+          {
+            "type": "hour",
+            "min": 18,
+            "max": 24
+          }
+        ]
+      },
+      "steps": [
+        "Reach Gajuwaka after sunset"
+      ],
+      "reward": 2000
+    },
+    {
+      "id": "m14",
+      "title": "Coastal Return",
+      "type": "vehicle",
+      "zone": "RUSHIKONDA",
+      "objective": {
+        "type": "vehicleReach",
+        "x": -390,
+        "z": -10,
+        "radius": 18
+      },
+      "steps": [
+        "Reach Rushikonda"
+      ],
+      "reward": 2100
+    },
+    {
+      "id": "m15",
+      "title": "Storm Warning",
+      "type": "survival",
+      "zone": "RUSHIKONDA",
+      "objective": {
+        "type": "weather",
+        "mode": "Storm"
+      },
+      "steps": [
+        "Reach Rushikonda during a storm"
+      ],
+      "reward": 180000
+    },
+    {
+      "id": "m16",
+      "title": "The Safehouse",
+      "type": "property",
+      "zone": "DWARAKA NAGAR",
+      "objective": {
+        "type": "ownProperty",
+        "property": "safehouse"
+      },
+      "steps": [
+        "Own the Downtown Safehouse"
+      ],
+      "reward": 3500
+    },
+    {
+      "id": "m17",
+      "title": "Port of Secrets",
+      "type": "investigation",
+      "zone": "PORT / YARADA",
+      "objective": {
+        "type": "reach",
+        "x": 490,
+        "z": -80,
+        "radius": 14
+      },
+      "steps": [
+        "Investigate Port / Yarada"
+      ],
+      "reward": 2600
+    },
+    {
+      "id": "m18",
+      "title": "Hill Route",
+      "type": "exploration",
+      "zone": "SIMHACHALAM",
+      "objective": {
+        "type": "vehicleReach",
+        "x": 95,
+        "z": 515,
+        "radius": 18
+      },
+      "steps": [
+        "Reach Simhachalam"
+      ],
+      "reward": 2800
+    },
+    {
+      "id": "m19",
+      "title": "Final Pursuit",
+      "type": "chase",
+      "zone": "NAD JUNCTION",
+      "objective": {
+        "type": "wanted",
+        "min": 3
+      },
+      "steps": [
+        "Reach NAD while wanted"
+      ],
+      "reward": 3200
+    },
+    {
+      "id": "m20",
+      "title": "Rise of the Coast",
+      "type": "finale",
+      "zone": "RK BEACH",
+      "objective": {
+        "type": "vehicleReach",
+        "x": 0,
+        "z": -25,
+        "radius": 18
+      },
+      "steps": [
+        "Complete the final coastal route"
+      ],
+      "reward": 50000,
+      "dialogue": [
+        {
+          "name": "ALLY",
+          "text": "This is the coast you fought for. Keep moving forward."
+        }
+      ]
+    }
+  ],
+  "side": [
+    {
+      "id": "s01",
+      "title": "Beach Patrol",
+      "type": "side",
+      "zone": "RK BEACH",
+      "objective": {
+        "type": "reach",
+        "x": 0,
+        "z": -25,
+        "radius": 14
+      },
+      "steps": [
+        "Complete the beach patrol objective"
+      ],
+      "reward": 345
+    },
+    {
+      "id": "s02",
+      "title": "Sunset Tourist",
+      "type": "side",
+      "zone": "RK BEACH PROMENADE",
+      "objective": {
+        "type": "reach",
+        "x": 45,
+        "z": -90,
+        "radius": 14
+      },
+      "steps": [
+        "Complete the sunset tourist objective"
+      ],
+      "reward": 390
+    },
+    {
+      "id": "s03",
+      "title": "Market Supplies",
+      "type": "side",
+      "zone": "COASTAL MARKET",
+      "objective": {
+        "type": "reach",
+        "x": 170,
+        "z": 100,
+        "radius": 14
+      },
+      "steps": [
+        "Complete the market supplies objective"
+      ],
+      "reward": 435
+    },
+    {
+      "id": "s04",
+      "title": "Cafe Delivery",
+      "type": "side",
+      "zone": "RUSHIKONDA",
+      "objective": {
+        "type": "vehicleReach",
+        "x": -390,
+        "z": -10,
+        "radius": 18
+      },
+      "steps": [
+        "Complete the cafe delivery objective"
+      ],
+      "reward": 480
+    },
+    {
+      "id": "s05",
+      "title": "Hill Courier",
+      "type": "side",
+      "zone": "KAILASAGIRI",
+      "objective": {
+        "type": "vehicleReach",
+        "x": -210,
+        "z": -25,
+        "radius": 18
+      },
+      "steps": [
+        "Complete the hill courier objective"
+      ],
+      "reward": 525
+    },
+    {
+      "id": "s06",
+      "title": "MVP Pickup",
+      "type": "side",
+      "zone": "MVP COLONY",
+      "objective": {
+        "type": "vehicleReach",
+        "x": -105,
+        "z": 235,
+        "radius": 18
+      },
+      "steps": [
+        "Complete the mvp pickup objective"
+      ],
+      "reward": 570
+    },
+    {
+      "id": "s07",
+      "title": "Siripuram Food Run",
+      "type": "side",
+      "zone": "SIRIPURAM",
+      "objective": {
+        "type": "vehicleReach",
+        "x": 95,
+        "z": 235,
+        "radius": 18
+      },
+      "steps": [
+        "Complete the siripuram food run objective"
+      ],
+      "reward": 615
+    },
+    {
+      "id": "s08",
+      "title": "Dwaraka Document",
+      "type": "side",
+      "zone": "DWARAKA NAGAR",
+      "objective": {
+        "type": "reach",
+        "x": 260,
+        "z": 245,
+        "radius": 14
+      },
+      "steps": [
+        "Complete the dwaraka document objective"
+      ],
+      "reward": 660
+    },
+    {
+      "id": "s09",
+      "title": "NAD Parcel",
+      "type": "side",
+      "zone": "NAD TRANSPORT HUB",
+      "objective": {
+        "type": "vehicleReach",
+        "x": 350,
+        "z": 410,
+        "radius": 18
+      },
+      "steps": [
+        "Complete the nad parcel objective"
+      ],
+      "reward": 705
+    },
+    {
+      "id": "s10",
+      "title": "Gajuwaka Spare Parts",
+      "type": "side",
+      "zone": "GAJUWAKA INDUSTRIAL HUB",
+      "objective": {
+        "type": "vehicleReach",
+        "x": 500,
+        "z": 235,
+        "radius": 18
+      },
+      "steps": [
+        "Complete the gajuwaka spare parts objective"
+      ],
+      "reward": 750
+    },
+    {
+      "id": "s11",
+      "title": "Port Watch",
+      "type": "side",
+      "zone": "PORT / YARADA",
+      "objective": {
+        "type": "reach",
+        "x": 490,
+        "z": -80,
+        "radius": 14
+      },
+      "steps": [
+        "Complete the port watch objective"
+      ],
+      "reward": 795
+    },
+    {
+      "id": "s12",
+      "title": "Simhachalam Visitor",
+      "type": "side",
+      "zone": "SIMHACHALAM",
+      "objective": {
+        "type": "reach",
+        "x": 95,
+        "z": 515,
+        "radius": 14
+      },
+      "steps": [
+        "Complete the simhachalam visitor objective"
+      ],
+      "reward": 840
+    },
+    {
+      "id": "s13",
+      "title": "Beach Night Ride",
+      "type": "side",
+      "zone": "RK BEACH",
+      "objective": {
+        "type": "vehicleReach",
+        "x": 0,
+        "z": -25,
+        "radius": 18
+      },
+      "steps": [
+        "Complete the beach night ride objective"
+      ],
+      "reward": 885
+    },
+    {
+      "id": "s14",
+      "title": "Storm Rescue",
+      "type": "side",
+      "zone": "RUSHIKONDA",
+      "objective": {
+        "type": "reach",
+        "x": -390,
+        "z": -10,
+        "radius": 14
+      },
+      "steps": [
+        "Complete the storm rescue objective"
+      ],
+      "reward": 930
+    },
+    {
+      "id": "s15",
+      "title": "Coastal Photographer",
+      "type": "side",
+      "zone": "RK BEACH",
+      "objective": {
+        "type": "reach",
+        "x": 0,
+        "z": -25,
+        "radius": 14
+      },
+      "steps": [
+        "Complete the coastal photographer objective"
+      ],
+      "reward": 975
+    },
+    {
+      "id": "s16",
+      "title": "Roadside Mechanic",
+      "type": "side",
+      "zone": "GAJUWAKA",
+      "objective": {
+        "type": "reach",
+        "x": 500,
+        "z": 235,
+        "radius": 14
+      },
+      "steps": [
+        "Complete the roadside mechanic objective"
+      ],
+      "reward": 1020
+    },
+    {
+      "id": "s17",
+      "title": "Apartment Errand",
+      "type": "side",
+      "zone": "DWARAKA NAGAR",
+      "objective": {
+        "type": "reach",
+        "x": 260,
+        "z": 245,
+        "radius": 14
+      },
+      "steps": [
+        "Complete the apartment errand objective"
+      ],
+      "reward": 1065
+    },
+    {
+      "id": "s18",
+      "title": "Hill Supplies",
+      "type": "side",
+      "zone": "SIMHACHALAM",
+      "objective": {
+        "type": "vehicleReach",
+        "x": 95,
+        "z": 515,
+        "radius": 18
+      },
+      "steps": [
+        "Complete the hill supplies objective"
+      ],
+      "reward": 1110
+    },
+    {
+      "id": "s19",
+      "title": "Maddilapalem Messenger",
+      "type": "side",
+      "zone": "MADDILAPALEM",
+      "objective": {
+        "type": "vehicleReach",
+        "x": -70,
+        "z": 390,
+        "radius": 18
+      },
+      "steps": [
+        "Complete the maddilapalem messenger objective"
+      ],
+      "reward": 1155
+    },
+    {
+      "id": "s20",
+      "title": "MVP Grocery",
+      "type": "side",
+      "zone": "MVP COLONY",
+      "objective": {
+        "type": "reach",
+        "x": -105,
+        "z": 235,
+        "radius": 14
+      },
+      "steps": [
+        "Complete the mvp grocery objective"
+      ],
+      "reward": 1200
+    },
+    {
+      "id": "s21",
+      "title": "Beach Road Pickup",
+      "type": "side",
+      "zone": "BEACH ROAD",
+      "objective": {
+        "type": "vehicleReach",
+        "x": 80,
+        "z": 125,
+        "radius": 18
+      },
+      "steps": [
+        "Complete the beach road pickup objective"
+      ],
+      "reward": 1245
+    },
+    {
+      "id": "s22",
+      "title": "NAD Night Bus",
+      "type": "side",
+      "zone": "NAD JUNCTION",
+      "objective": {
+        "type": "vehicleReach",
+        "x": 350,
+        "z": 410,
+        "radius": 18
+      },
+      "steps": [
+        "Complete the nad night bus objective"
+      ],
+      "reward": 1290
+    },
+    {
+      "id": "s23",
+      "title": "Industrial Escort",
+      "type": "side",
+      "zone": "GAJUWAKA",
+      "objective": {
+        "type": "vehicleReach",
+        "x": 500,
+        "z": 235,
+        "radius": 18
+      },
+      "steps": [
+        "Complete the industrial escort objective"
+      ],
+      "reward": 1335
+    },
+    {
+      "id": "s24",
+      "title": "Yarada Fuel Run",
+      "type": "side",
+      "zone": "PORT / YARADA",
+      "objective": {
+        "type": "vehicleReach",
+        "x": 490,
+        "z": -80,
+        "radius": 18
+      },
+      "steps": [
+        "Complete the yarada fuel run objective"
+      ],
+      "reward": 1380
+    },
+    {
+      "id": "s25",
+      "title": "Rushikonda Cafe Run",
+      "type": "side",
+      "zone": "RUSHIKONDA",
+      "objective": {
+        "type": "vehicleReach",
+        "x": -390,
+        "z": -10,
+        "radius": 18
+      },
+      "steps": [
+        "Complete the rushikonda cafe run objective"
+      ],
+      "reward": 1425
+    },
+    {
+      "id": "s26",
+      "title": "Kailasagiri Viewpoint",
+      "type": "side",
+      "zone": "KAILASAGIRI",
+      "objective": {
+        "type": "reach",
+        "x": -210,
+        "z": -25,
+        "radius": 14
+      },
+      "steps": [
+        "Complete the kailasagiri viewpoint objective"
+      ],
+      "reward": 1470
+    },
+    {
+      "id": "s27",
+      "title": "Siripuram Appointment",
+      "type": "side",
+      "zone": "SIRIPURAM",
+      "objective": {
+        "type": "reach",
+        "x": 95,
+        "z": 235,
+        "radius": 14
+      },
+      "steps": [
+        "Complete the siripuram appointment objective"
+      ],
+      "reward": 1515
+    },
+    {
+      "id": "s28",
+      "title": "Market Medical Run",
+      "type": "side",
+      "zone": "COASTAL MARKET",
+      "objective": {
+        "type": "vehicleReach",
+        "x": 170,
+        "z": 100,
+        "radius": 18
+      },
+      "steps": [
+        "Complete the market medical run objective"
+      ],
+      "reward": 1560
+    },
+    {
+      "id": "s29",
+      "title": "Downtown Recovery",
+      "type": "side",
+      "zone": "DWARAKA NAGAR",
+      "objective": {
+        "type": "vehicleReach",
+        "x": 260,
+        "z": 245,
+        "radius": 18
+      },
+      "steps": [
+        "Complete the downtown recovery objective"
+      ],
+      "reward": 1605
+    },
+    {
+      "id": "s30",
+      "title": "Coast to Hills",
+      "type": "side",
+      "zone": "SIMHACHALAM",
+      "objective": {
+        "type": "vehicleReach",
+        "x": 95,
+        "z": 515,
+        "radius": 18
+      },
+      "steps": [
+        "Complete the coast to hills objective"
+      ],
+      "reward": 1650
+    }
+  ]
+}

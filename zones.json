@@ -1,0 +1,19 @@
+{
+  "version": 5,
+  "title": "Vizag-inspired Phase 5 world zones",
+  "note": "Fictionalized/procedural game geometry. Place names are reference points; verify licensing/attribution before adding external geographic datasets.",
+  "zones": [
+    {"id":"rk-beach","name":"RK BEACH","type":"coast","center":[0,-25]},
+    {"id":"beach-road","name":"BEACH ROAD","type":"coast","center":[80,125]},
+    {"id":"kailasagiri","name":"KAILASAGIRI","type":"hill","center":[-210,-25]},
+    {"id":"mvp-colony","name":"MVP COLONY","type":"residential","center":[-105,235]},
+    {"id":"maddilapalem","name":"MADDILAPALEM","type":"residential","center":[-70,390]},
+    {"id":"siripuram","name":"SIRIPURAM","type":"commercial","center":[95,235]},
+    {"id":"dwaraka-nagar","name":"DWARAKA NAGAR","type":"commercial","center":[260,245]},
+    {"id":"nad","name":"NAD JUNCTION","type":"junction","center":[350,410]},
+    {"id":"gajuwaka","name":"GAJUWAKA","type":"industrial","center":[500,235]},
+    {"id":"rushikonda","name":"RUSHIKONDA","type":"coast","center":[-390,-10]},
+    {"id":"simhachalam","name":"SIMHACHALAM","type":"hill","center":[95,515]},
+    {"id":"port","name":"PORT / YARADA","type":"industrial","center":[490,-80]}
+  ]
+}

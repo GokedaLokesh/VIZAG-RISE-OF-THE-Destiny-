@@ -1,0 +1,36 @@
+{
+  "npcs": [
+    {
+      "type": "student",
+      "scale": 0.95
+    },
+    {
+      "type": "office-worker",
+      "scale": 1.0
+    },
+    {
+      "type": "tourist",
+      "scale": 1.0
+    },
+    {
+      "type": "vendor",
+      "scale": 1.0
+    },
+    {
+      "type": "fisherman",
+      "scale": 1.02
+    },
+    {
+      "type": "shopkeeper",
+      "scale": 1.02
+    },
+    {
+      "type": "security",
+      "scale": 1.04
+    },
+    {
+      "type": "police",
+      "scale": 1.05
+    }
+  ]
+}

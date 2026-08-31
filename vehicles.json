@@ -1,0 +1,42 @@
+[
+  {
+    "id": "v_hatch",
+    "name": "Coastal Hatch",
+    "type": "car",
+    "speed": 52,
+    "accel": 22,
+    "handling": 2.8
+  },
+  {
+    "id": "v_sedan",
+    "name": "Bay Sedan",
+    "type": "car",
+    "speed": 58,
+    "accel": 20,
+    "handling": 2.5
+  },
+  {
+    "id": "v_scooter",
+    "name": "City Scooter",
+    "type": "bike",
+    "speed": 42,
+    "accel": 27,
+    "handling": 3.5
+  },
+  {
+    "id": "v_auto",
+    "name": "Metro Auto",
+    "type": "auto",
+    "speed": 38,
+    "accel": 18,
+    "handling": 3.1
+  },
+  {
+    "id": "v_bus",
+    "name": "Coastliner Bus",
+    "type": "bus",
+    "speed": 45,
+    "accel": 12,
+    "handling": 1.8
+  }
+]

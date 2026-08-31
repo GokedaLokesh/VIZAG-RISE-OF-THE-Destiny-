@@ -1,0 +1,18 @@
+{
+  "phase": 6,
+  "description": "Interactive fictionalized businesses for the Vizag-inspired game world.",
+  "businesses": [
+    {"id":"rk-market","name":"RK COAST MARKET","type":"shop","x":45,"z":-62},
+    {"id":"beach-restaurant","name":"COASTLINE RESTAURANT","type":"restaurant","x":125,"z":55},
+    {"id":"mvp-clothes","name":"MVP STYLE HOUSE","type":"clothes","x":-110,"z":210},
+    {"id":"siripuram-mart","name":"SIRIPURAM MART","type":"shop","x":85,"z":205},
+    {"id":"dwaraka-garage","name":"DWARAKA AUTO GARAGE","type":"garage","x":285,"z":210},
+    {"id":"nad-fuel","name":"NAD FUEL STOP","type":"fuel","x":355,"z":370},
+    {"id":"gajuwaka-garage","name":"GAJUWAKA MOTOR WORKS","type":"garage","x":475,"z":205},
+    {"id":"rushikonda-cafe","name":"RUSHIKONDA CAFE","type":"restaurant","x":-365,"z":20},
+    {"id":"port-fuel","name":"PORT FUEL STATION","type":"fuel","x":455,"z":-45},
+    {"id":"simhachalam-home","name":"SIMHACHALAM HOMES","type":"property","x":70,"z":480},
+    {"id":"beach-apartment","name":"COASTAL VIEW APARTMENTS","type":"property","x":20,"z":-45},
+    {"id":"city-office","name":"DOWNTOWN SAFEHOUSE","type":"property","x":245,"z":275}
+  ]
+}
