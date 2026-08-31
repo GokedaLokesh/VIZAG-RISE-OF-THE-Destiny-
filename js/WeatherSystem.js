@@ -1,0 +1,5 @@
+import * as THREE from "three";
+export class WeatherSystem{
+ constructor(scene){this.scene=scene;this.mode="Clear";this.timer=35;this.rain=new THREE.Points(new THREE.BufferGeometry(),new THREE.PointsMaterial({color:0xaed6e8,size:.16,transparent:true,opacity:.55}));const a=[];for(let i=0;i<1600;i++)a.push((Math.random()-.5)*700,Math.random()*120,(Math.random()-.5)*650);this.rain.geometry.setAttribute("position",new THREE.Float32BufferAttribute(a,3));this.rain.visible=false;scene.add(this.rain)}
+ update(dt){this.timer-=dt;if(this.timer<=0){this.timer=45;this.mode=["Clear","Cloudy","Rain","Fog","Storm"][Math.floor(Math.random()*5)]}this.rain.visible=this.mode==="Rain"||this.mode==="Storm";if(this.rain.visible){const p=this.rain.geometry.attributes.position;for(let i=0;i<p.count;i++){let y=p.getY(i)-dt*35;if(y<0)y=120;p.setY(i,y)}p.needsUpdate=true}}
+}
