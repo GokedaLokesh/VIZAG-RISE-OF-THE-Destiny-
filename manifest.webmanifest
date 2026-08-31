@@ -1,0 +1,18 @@
+{
+  "name": "VIZAG \u2014 RISE OF THE COAST",
+  "short_name": "VIZAG RISE",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#07151f",
+  "theme_color": "#07151f",
+  "description": "Fictionalized browser open-world adventure inspired by Visakhapatnam.",
+  "orientation": "landscape-primary",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

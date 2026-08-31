@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>VIZAG — RISE OF THE COAST</title>
+  <meta name="description" content="A fictionalized, browser-based open-world adventure inspired by Visakhapatnam.">
+  <meta name="theme-color" content="#07151f">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/menu.css">
+  <link rel="stylesheet" href="./css/hud.css">
+  <link rel="stylesheet" href="./css/map.css">
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.179.1/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.179.1/examples/jsm/"
+    }
+  }
+  </script>
+</head>
+<body>
+  <div id="loading">
+    <div class="load-card">
+      <div class="eyebrow">COASTAL OPEN-WORLD EXPERIENCE</div>
+      <h1>VIZAG <span>—</span> RISE OF THE COAST</h1>
+      <div class="loading-bar"><i id="load-progress"></i></div>
+      <p id="load-status">Initializing world...</p>
+      <small>Procedural prototype • fictionalized game layer • Three.js/WebGL</small>
+    </div>
+  </div>
+
+  <div id="title-screen" class="screen">
+    <div class="title-overlay"></div>
+    <div class="title-content">
+      <div class="eyebrow">BAY OF BENGAL • ANDHRA PRADESH</div>
+      <h1>VIZAG</h1>
+      <h2>RISE OF THE COAST</h2>
+      <p>A fictional open-world adventure inspired by Visakhapatnam.</p>
+      <div class="menu-buttons">
+        <button id="new-game">NEW GAME</button>
+        <button id="continue-game">CONTINUE</button>
+        <button id="settings-btn">SETTINGS</button>
+        <button id="controls-btn">CONTROLS</button>
+        <button id="credits-btn">CREDITS</button>
+        <button id="install-btn" class="hidden">INSTALL APP</button>
+      </div>
+      <div class="title-note">PC: WASD + mouse • Mobile: virtual controls + touch camera</div>
+    </div>
+  </div>
+
+  <div id="game"></div>
+
+  <div id="wanted" class="wanted">WANTED <span>☆☆☆☆☆</span></div>
+  <div id="hud" class="hidden">
+    <div class="hud-top">
+      <div class="brand">VIZAG <b>RISE</b></div>
+      <div class="status-pills">
+        <span id="time-pill">08:00</span>
+        <span id="weather-pill">CLEAR</span>
+        <span id="zone-pill">RK BEACH</span><span id="perf-pill">-- FPS</span>
+      </div>
+    </div>
+    <div class="hud-left">
+      <div class="stat"><label>HEALTH</label><div class="bar"><i id="health-bar"></i></div></div>
+      <div class="stat"><label>STAMINA</label><div class="bar"><i id="stamina-bar"></i></div></div>
+      <div class="cash" id="cash">₹ 2,500</div><button id="inventory-btn" class="hud-mini-btn">INVENTORY</button><button id="journal-btn" class="hud-mini-btn">JOURNAL</button>
+    </div>
+    <div class="mission-card">
+      <div class="eyebrow">CURRENT OBJECTIVE</div>
+      <h3 id="mission-title">WELCOME TO VIZAG</h3>
+      <p id="mission-objective">Explore RK Beach.</p>
+    </div>
+    <div class="interaction hidden" id="interaction">E — INTERACT</div>
+    <div class="business-hint hidden" id="business-hint"></div>
+    <div class="vehicle-hud hidden" id="vehicle-hud">
+      <div><b id="speed">0</b><small> KM/H</small></div>
+      <div class="fuel-wrap">FUEL <span id="fuel">100</span>%</div>
+    </div>
+    <div class="minimap" id="minimap"><canvas id="mini-canvas" width="220" height="220"></canvas><span class="player-dot"></span></div>
+    <div class="controls-hint">WASD Move • SHIFT Sprint • SPACE Jump • E Interact • M Map • ESC Pause</div>
+  </div>
+
+  <div id="map-panel" class="panel hidden">
+    <div class="panel-head"><h2>VIZAG MAP</h2><button class="close-panel">×</button></div>
+    <div class="map-layout"><canvas id="map-canvas" width="900" height="560"></canvas><div id="location-list"></div></div>
+  </div>
+
+
+  <div id="business-panel" class="panel hidden">
+    <div class="business-card">
+      <div class="panel-head"><div><div class="eyebrow" id="business-type">BUSINESS</div><h2 id="business-title">SHOP</h2><p id="business-district"></p></div><button class="close-panel">×</button></div>
+      <div id="business-actions" class="business-actions"></div>
+    </div>
+  </div>
+
+  <div id="journal-panel" class="panel hidden">
+    <div class="business-card journal-card">
+      <div class="panel-head"><div><div class="eyebrow">CAMPAIGN</div><h2>MISSION JOURNAL</h2><p id="journal-progress">0 / 20 MAIN • 0 / 30 SIDE</p></div><button class="close-panel">×</button></div>
+      <div class="journal-tabs"><button id="main-tab" class="active">MAIN STORY</button><button id="side-tab">SIDE MISSIONS</button></div>
+      <div id="journal-list" class="journal-list"></div>
+    </div>
+  </div>
+
+  <div id="dialogue-panel" class="panel hidden dialogue-panel">
+    <div class="dialogue-card"><div class="eyebrow" id="dialogue-name">CONTACT</div><p id="dialogue-text"></p><button id="dialogue-next">CONTINUE</button></div>
+  </div>
+
+  <div id="inventory-panel" class="panel hidden">
+    <div class="business-card">
+      <div class="panel-head"><div><div class="eyebrow">PLAYER INVENTORY</div><h2>INVENTORY</h2></div><button class="close-panel">×</button></div>
+      <div id="inventory-list" class="inventory-list"></div>
+      <div class="property-summary"><span>PROPERTIES</span><b id="property-count">0</b></div>
+    </div>
+  </div>
+
+  <div id="pause-panel" class="panel hidden">
+    <div class="pause-card">
+      <div class="eyebrow">PAUSED</div><h2>RISE OF THE COAST</h2>
+      <button id="resume-btn">RESUME</button><button id="save-btn">SAVE GAME</button><button id="fullscreen-btn">FULLSCREEN</button>
+      <button id="pause-map-btn">MAP</button><button id="pause-settings-btn">SETTINGS</button>
+      <button id="exit-btn">EXIT TO TITLE</button>
+    </div>
+  </div>
+
+  <div id="settings-panel" class="panel hidden">
+    <div class="settings-card">
+      <div class="panel-head"><h2>SETTINGS</h2><button class="close-panel">×</button></div>
+      <label>Graphics Quality <select id="quality"><option>Low</option><option selected>Medium</option><option>High</option><option>Ultra</option></select></label>
+      <label>Traffic Density <input id="traffic-density" type="range" min="0" max="100" value="65"></label>
+      <label>NPC Density <input id="npc-density" type="range" min="0" max="100" value="70"></label>
+      <label>Master Volume <input id="master-volume" type="range" min="0" max="100" value="70"></label>
+      <label>Weather Effects <input id="weather-effects" type="checkbox" checked></label>
+    </div>
+  </div>
+
+  <div id="controls-panel" class="panel hidden">
+    <div class="info-card"><div class="panel-head"><h2>CONTROLS</h2><button class="close-panel">×</button></div>
+      <div class="keygrid"><b>W A S D</b><span>Walk / drive</span><b>SHIFT</b><span>Sprint</span><b>SPACE</b><span>Jump</span><b>E</b><span>Interact / enter vehicle</span><b>M</b><span>Map</span><b>ESC</b><span>Pause</span><b>Mouse</b><span>Look around</span></div>
+    </div>
+  </div>
+
+  <div id="credits-panel" class="panel hidden">
+    <div class="info-card"><div class="panel-head"><h2>CREDITS</h2><button class="close-panel">×</button></div>
+      <p><b>VIZAG — RISE OF THE COAST</b></p><p>Original browser-game prototype built with HTML5, CSS3, JavaScript modules and Three.js.</p>
+      <p>Real-world names are used as inspiration/reference points; the gameplay world is fictionalized and does not reproduce every building or official organization.</p>
+      <p>No Google Maps/Street View imagery, GTA assets, copyrighted characters or copyrighted music are included.</p>
+    </div>
+  </div>
+
+  
+  <div id="mobile-controls" class="mobile-controls">
+    <div id="touch-look" class="touch-look"></div>
+    <div id="touch-joystick" class="touch-joystick" aria-label="Movement joystick">
+      <div id="touch-knob" class="touch-knob"></div>
+    </div>
+    <div class="touch-actions">
+      <button id="touch-map" aria-label="Map">MAP</button><button id="touch-journal" aria-label="Journal">LOG</button>
+      <button id="touch-interact" aria-label="Interact">E</button>
+      <button id="touch-sprint" aria-label="Sprint">RUN</button>
+      <button id="touch-jump" aria-label="Jump">JUMP</button>
+    </div>
+  </div>
+
+  <div id="toast"></div>
+  <div id="fatal-error" class="fatal-error hidden" role="alert"><div><b>GAME ERROR</b><p id="fatal-error-text">Something went wrong while starting the game.</p><button id="reload-game">RELOAD</button></div></div>
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>
